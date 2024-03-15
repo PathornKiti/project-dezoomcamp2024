@@ -29,6 +29,15 @@ override.tf.json
 # Include tfplan files to ignore the plan output of command: terraform plan -out=tfplan
 # example: *tfplan*
 
+__pycache__/
+.pytest_cache
+**/__pycache__
+.vscode/
+airflow.cfg
+unittests.cfg
+airflow.db
+logs/
+
 # Ignore CLI configuration files
 .terraformrc
 terraform.rc
