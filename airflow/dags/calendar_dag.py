@@ -18,7 +18,7 @@ DATASET=os.environ.get("DATASET")
 path_to_local_home = os.environ.get("AIRFLOW_HOME", "/opt/airflow/")
 
 def get_parquet(path):
-    df_cal=extract("2023-12-25","calendar")
+    df_cal=extract("2023-03-28","calendar")
     df_cal['date'] = pd.to_datetime(df_cal['date'])
     directory = os.path.join(path, 'available') 
     if not os.path.exists(directory):
