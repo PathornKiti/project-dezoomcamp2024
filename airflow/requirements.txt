@@ -1,0 +1,6 @@
+apache-airflow-providers-google
+pyarrow
+py4j
+pyspark
+pandas
+requests
