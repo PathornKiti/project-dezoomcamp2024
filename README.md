@@ -98,3 +98,13 @@ Both partitioning and clustering techniques contribute to improved query perform
 
 ## Data Transformation (Spark)
 
+Inspect Dataproc in GCP to verify if the cluster appears after provisioning by Terraform. If the cluster is available, upload the [Spark job](spark_job.py) to Google Cloud Storage.
+
+After uploading, use this command in Google Cloud Shell to submit the Spark job:
+
+```shell
+gcloud dataproc jobs submit pyspark \
+--cluster="cluster-name" \
+--region="region" \
+gs://bucket_name/spark_job.py \
+```

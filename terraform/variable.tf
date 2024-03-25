@@ -1,6 +1,6 @@
 variable "project" {
   description = "Project"
-  default     = "datacafeplayground"
+  default     = "project_name"
 }
 
 variable "region" {
@@ -36,62 +36,43 @@ variable "bq_dataset_name" {
   default     = "airbnb_bkk_warehouse"
 }
 
-variable "cluster_name" {
-    description = "The name of the cluster, unique within the project and zoneData"
+variable "dataproc_master_machine_type" {
+  type        = string
+  description = "dataproc master node machine tyoe"
+  default     = "n1-standard-2"
 }
 
-variable "labels" {
-    description = "The list of labels (key/value pairs) to be applied to instances in the cluster"
-    default     = {}
+variable "dataproc_worker_machine_type" {
+  type        = string
+  description = "dataproc worker nodes machine type"
+  default     = "n1-standard-2"
 }
 
-
-variable "staging_bucket" {
-    description = "The Cloud Storage staging bucket used to stage files, such as Hadoop jars, between client machines and the cluster"
-    default =   ""
+variable "dataproc_workers_count" {
+  type        = number
+  description = "count of worker nodes in cluster"
+  default     = 1
+}
+variable "dataproc_master_bootdisk" {
+  type        = number
+  description = "primary disk attached to master node, specified in GB"
+  default     = 500
 }
 
-variable "master_num_instances" {
-    description = "Specifies the number of master nodes to create"
-    default     = 1
+variable "dataproc_worker_bootdisk" {
+  type        = number
+  description = "primary disk attached to master node, specified in GB"
+  default     = 500
 }
 
-variable "master_machine_type" {
-    description = "The name of a Google Compute Engine machine type to create for the master"
-    default     = "n1-standard-4"
+variable "worker_local_ssd" {
+  type        = number
+  description = "primary disk attached to master node, specified in GB"
+  default     = 0
 }
 
-variable "master_boot_disk_size_gb" {
-    description = "Size of the primary disk attached to each node, specified in GB"
-    default     = 10
-}
-
-variable "worker_num_instances" {
-    description = "Specifies the number of worker nodes to create"
-    default     = 2
-}
-
-variable "worker_machine_type" {
-    description = "The name of a Google Compute Engine machine type to create for the worker nodes"
-    default     = "n1-standard-4"
-}
-
-variable "worker_boot_disk_size_gb" {
-    description = "Size of the primary disk attached to each worker node, specified in GB"
-    default     = 10
-}
-
-variable "worker_num_local_ssds" {
-    description = "The amount of local SSD disks that will be attached to each worker cluster node"
-    default     = 0
-}
-
-variable "preemptible_num_instances" {
-    description = "Specifies the number of preemptible nodes to create"
-    default     = 0
-}
-
-variable "image_version" {
-    description = "The Cloud Dataproc image version to use for the clustere"
-    default     = "1.2"
+variable "preemptible_worker" {
+  type        = number
+  description = "number of preemptible nodes to create"
+  default     = 1
 }
