@@ -55,8 +55,37 @@ terraform plan
 terraform apply
 ```
 
-Remove the service
+Remove the services
 
 ```bash
 terraform destroy
 ```
+
+## Airflow
+
+```bash
+cd airflow
+```
+
+Rename your gcp-service-accounts-credentials file to `google_credentials.json` & store it in your `$HOME` directory
+    ``` bash
+        cd ~ && mkdir -p ~/.google/credentials/
+        mv <path/to/your/service-account-authkeys>.json ~/.google/credentials/google_credentials.json
+    ```
+
+Build the image (only first-time, or when there's any change in the `Dockerfile`):
+     ```bash
+     docker-compose build
+     ```
+
+Start all the services from the container:
+    ```bash
+    docker-compose up
+    ```
+
+After start the services you can access web UI on `http://0.0.0.0:8080` User name and password are both `airflow`
+
+Shut down the container:
+    ```bash
+    docker-compose down
+    ```
