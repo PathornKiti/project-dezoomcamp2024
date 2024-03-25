@@ -1,4 +1,4 @@
-# project-dezoomcamp2024 by Pathorn
+# Project-DEzoomcamp2024 by Pathorn
 
 ## Problem Description
 
@@ -108,3 +108,12 @@ gcloud dataproc jobs submit pyspark \
 --region="region" \
 gs://bucket_name/spark_job.py \
 ```
+
+## Summary
+I'm constantly looking for ways to improve this project through exploring new data engineering technologies and best practices. If you have any comments or suggestions, I'd love to hear them! This project has exciting possibilities for expansion! We can integrate machine learning to unlock new insights, or broaden the scope of our dashboard to cater to diverse stakeholders like hosts, tourists, and even government officials.Moreover, optimizing costs, computing resources, and storage utilization will bring us closer to data engineering best practices, ensuring efficiency and scalability. Let this project be a source of knowledge and insight, guiding us towards continuous improvement and excellence in data engineering. Connect me [My Linkedin](https://www.linkedin.com/in/pathornkiti/) 
+
+
+
+
+
+
