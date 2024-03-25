@@ -89,3 +89,12 @@ Shut down the container:
 ```shell
 docker-compose down
 ```
+
+## Data Warehouse
+After created external table to integrate datawarehouse with datalake by Airflow in previous section.In order to transformation, the data need to create native table.
+Create native table from: [Create native table](create_native.sql)
+
+Both partitioning and clustering techniques contribute to improved query performance by optimizing data access patterns, minimizing I/O operations, and enabling parallel processing.
+
+## Data Transformation (Spark)
+
