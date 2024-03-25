@@ -69,8 +69,8 @@ cd airflow
 
 Rename your gcp-service-accounts-credentials file to `google_credentials.json` & store it in your `$HOME` directory
 ``` shell
-    cd ~ && mkdir -p ~/.google/credentials/
-    mv <path/to/your/service-account-authkeys>.json ~/.google/credentials/google_credentials.json
+cd ~ && mkdir -p ~/.google/credentials/
+mv <path/to/your/service-account-authkeys>.json ~/.google/credentials/google_credentials.json
 ```
 
 Build the image (only first-time, or when there's any change in the `Dockerfile`):
