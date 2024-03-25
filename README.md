@@ -27,3 +27,36 @@ This project provides a dashboard that users can filter to choose the neighborho
 ![Dashboard](img/dashboard.png)
 
 For the geo plot, it shows the density of listings in each neighborhood and provides alternative listings for users to choose from within the filter values. The distribution plot displays the number of listings in price ranges separated by room type. Lastly, there's a word cloud of reviews. Additionally, a table ranks listing URLs based on the best review score value.
+
+## Workflow
+
+![Workflow](img/flow.png)
+
+## Terraform
+
+```bash
+cd terraform
+```
+
+Rename your gcp-service-accounts-credentials file to `google_credentials.json` & store it in your directory
+```bash
+export GOOGLE_APPLICATION_CREDENTIALS= "<path to your key>"
+```
+
+```bash
+terraform init
+```
+
+```bash
+terraform plan
+```
+
+```bash
+terraform apply
+```
+
+Remove the service
+
+```bash
+terraform destroy
+```

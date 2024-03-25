@@ -43,8 +43,6 @@ resource "google_dataproc_cluster" "demo_cluster" {
     labels  = "${var.labels}"
 
     cluster_config {
-        delete_autogen_bucket = "${var.delete_autogen_bucket}"
-
         staging_bucket        = "${var.staging_bucket}"
 
         master_config {
